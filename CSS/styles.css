@@ -1,0 +1,55 @@
+body {
+    width: 1920px;
+    background-color: grey;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-page {
+    background-image: url(../IMG/Sections-background/section-1\(header\).jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 305px;
+
+}
+
+.header-page-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;  
+    margin-top: 44px;
+}
+
+.header-page-logo svg {
+    position: relative;
+    left: 45px;
+    z-index: 0;
+}
+
+.logo-item {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 31px;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.text-logo-item {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+    padding-left: 20px;
+}
+
+.text-logo-item span {
+    color: #18CFAB;
+    font-weight: 700;
+}
+
+.menu-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 21px;
+}
