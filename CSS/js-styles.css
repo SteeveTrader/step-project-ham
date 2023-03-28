@@ -12,3 +12,54 @@
 .btn-visibility-style {
     display: none;
 }
+
+
+
+/* OUR Cervices styles -------------------------*/
+.services-content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+}
+
+.tabs-title {
+    width: 193px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8FCFE;
+    border: 1px solid #EDEFEF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 39px;
+    color: #717171;
+}
+
+.tabs-title:hover {
+    border: 2px solid #18CFAB;
+}
+
+.tabs-title.active {
+    background: #18CFAB;
+}
+
+.text {
+    display: none;
+}
+
+.show-text {
+    display: block
+}
+
+
+/* добавить картинки, разместить их с помощью псевдо 
+эелементов, добавить текст, перейти в JS  и написать формулу*/
+
