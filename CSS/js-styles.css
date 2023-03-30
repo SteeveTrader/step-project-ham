@@ -17,7 +17,7 @@
 
 /* OUR Cervices styles -------------------------*/
 .services-content {
-    height: 50vh;
+    margin: 69px 0 91px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,6 +32,7 @@
 .tabs-title {
     width: 193px;
     height: 72px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +50,18 @@
 
 .tabs-title.active {
     background: #18CFAB;
+    position: relative;
+}
+
+.tabs-title.active::after {
+    content: "";
+    border: 1px solid #18CFAB;
+    background: #18CFAB;
+    padding: 8px;    
+    position: absolute;
+    right: 87px;
+    rotate: 45deg;
+    top: 60px;
 }
 
 .text {
@@ -56,10 +69,20 @@
 }
 
 .show-text {
-    display: block
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;
 }
 
+.text img {
+    width: 192px;
+    height: 139px;
+    object-fit: cover;
+}
 
-/* добавить картинки, разместить их с помощью псевдо 
-эелементов, добавить текст, перейти в JS  и написать формулу*/
 
