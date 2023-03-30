@@ -20,5 +20,10 @@ tabs.addEventListener('click', (event) => {
       }
 
     }
-    
+
   });
+
+
+  const BreakingNewsArr = [
+      {}
+  ]
