@@ -349,6 +349,7 @@ const card = document.querySelector('.cards');
 const cardContainer = document.querySelector('.card-container');
 const allCards = document.querySelector('.js-all');
 
+
 const getRandomCard = (arr, len) => {
   const shuffledArr = [...arr]; 
   for (let i = shuffledArr.length - 1; i > 0; i--) {
@@ -396,13 +397,6 @@ const wordpressCard = d.map(getCardHtml).join('');
 cardContainer.insertAdjacentHTML('beforeend', cardListHtml);
 
 card.addEventListener('click', (event) => {
-
-
-
-
-
-  const content = event.target.dataset.content;
-
   if (event.target === event.currentTarget) { 
     return;
   }
@@ -436,29 +430,22 @@ card.addEventListener('click', (event) => {
     cardContainer.insertAdjacentHTML('beforeend', wordpressCard);
     return;
   } 
-  });
 
 
-
-
-cardContainer.addEventListener('mouseover', e => {
-  if (e.target === e.currentTarget) {
-    return;
-  }
-
-  if (e.target !== e.target.closest('.flip-card-front')) {
-    return;
-  } else (e.target.closest('.flip-card-inner').classList.toggle('show-card-back'));
 });
 
-cardContainer.addEventListener('mouseout', e => {
-  if (e.target === e.currentTarget) {
-    return;
-  }
+const btn = document.querySelector('.load-btn');
+const load = document.querySelector('#preloader');
 
-  if(e.target !== e.target.closest('.flip-card-back')) {
-    return;
-  } else (e.target.closest('.flip-card-inner').classList.toggle('show-card-back'));
+btn.addEventListener('click', elem => {
+    load.classList.toggle('active');
+    btn.style.display = 'none';
 
+    setTimeout(() => {
+      load.classList.toggle('active');
+      cardContainer.insertAdjacentHTML('beforeend', cardListHtml);
+    }, 3000);
 });
+
+
 

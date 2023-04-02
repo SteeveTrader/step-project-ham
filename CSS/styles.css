@@ -331,6 +331,32 @@ body {
     margin-bottom: 73px;
 }
 
+.load-btn {
+    width: 168px;
+    height: 63px;
+    border-radius: 4px;
+    border-style: none;
+    background: #18CFAB;
+    margin-bottom: 99px;
+    text-decoration: none;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 15px;    
+}
+
+/* .load-btn a {
+
+} */
+
+.btn-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
 /*news-container -----------------------------------------*/
 .news-container {
     margin-top: 82px;
