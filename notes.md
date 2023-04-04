@@ -7,3 +7,5 @@
 6. 179 line  html - delete space between img-cards
 
 7. 440 line  work-card-script fix the reload buttom if we click between cards 
+
+8. fixed header navigation under all elements

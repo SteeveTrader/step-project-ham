@@ -35,3 +35,23 @@ tabs.addEventListener('click', (event) => {
     }
 
   });
+
+/* Breaking News-------------------*/
+
+const dateItem = document.querySelectorAll('.js-date');
+
+const newDate = new Date();
+const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+const getCurrentMonth = (arr, index) => {
+    return arr[index];
+};
+
+const dateElements = `
+  <div>${newDate.getDate()}</div>
+  <div>${getCurrentMonth(month, newDate.getMonth())}</div>
+`;
+
+dateItem.forEach((item) => {
+  item.insertAdjacentHTML('beforeend', dateElements);
+});

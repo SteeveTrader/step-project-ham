@@ -140,13 +140,11 @@
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 .flip-card {
     font-family: sans-serif;
     cursor: pointer;
-    background-color: transparent;
     width: 285px;
     height: 211px;  
     perspective: 1000px;
@@ -223,19 +221,19 @@
     margin: 0 auto;
   }
   
-  .lds-dual-ring:after {
+.lds-dual-ring:after {
     content: " ";
     display: block;
     width: 24px;
     height: 24px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid #18CFAB;;
+    border: 6px solid #18CFAB;
     border-color: #18CFAB transparent #18CFAB transparent;
     animation: lds-dual-ring 1.2s linear infinite;
   }
   
-  @keyframes lds-dual-ring {
+@keyframes lds-dual-ring {
     0% {
       transform: rotate(0deg);
     }
@@ -245,7 +243,19 @@
   }
   
   
-  .active{
+.active{
     display: block;
     margin-bottom: 99px;
   }
+
+/* Breaking News-------------------*/
+
+.date-item::before {
+    position: absolute;
+    content: "";
+    background: #203E38;
+    width: 70px;
+    height: 68px;
+    left: 10px;
+    top: 5px;
+}
