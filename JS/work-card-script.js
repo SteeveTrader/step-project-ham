@@ -345,7 +345,7 @@ const workCardsArr = [
         },  
 ];
 
-const card = document.querySelector('.cards');
+const card = document.querySelector('.work-cards');
 const cardContainer = document.querySelector('.card-container');
 const allCards = document.querySelector('.js-all');
 
@@ -445,7 +445,15 @@ btn.addEventListener('click', elem => {
       load.classList.toggle('active');
       cardContainer.insertAdjacentHTML('beforeend', cardListHtml);
     }, 3000);
+
+    if (!elem.target) {
+      load.classList.toggle('active');
+      btn.style.display = 'none';
+    }
 });
+
+
+
 
 
 
