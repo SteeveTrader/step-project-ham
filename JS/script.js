@@ -1,15 +1,5 @@
 "use strict";
 
-const searchForm  = document.querySelector('.search-form-container');
-const searchPlace = document.querySelector('.js-search-place');
-const btnTurnBack = document.querySelector('.js-btn-turn-back');
-const btnSearch = document.querySelector('.js-btn-search');
-
-searchPlace.classList.add('search-style');
-btnTurnBack.classList.add('btn-visibility-style');
-btnSearch.classList.add('btn-visibility-style');
-
-
 /* services-container--------------------------------------------------*/
 const tabs = document.querySelector('.tabs');
 
@@ -63,7 +53,7 @@ const usersArr = [
   {
     name: 'Jeremy Clarkson',
     image: `url('./IMG/testimonial/JZ.jpg')`,
-    profession: 'Mr. farmer',
+    profession: 'Mr. Farmer',
     opinion: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
               Quam, libero saepe deleniti laudantium architecto sapiente omnis veniam minima,  
               cupiditate totam esse repellendus laboriosam aspernatur ipsa in ab odio `,
@@ -97,17 +87,8 @@ const usersArr = [
               unsuspecting enemies.`,
   },
 
-  {
-    name: 'Roan Atkinson',
-    image: `url('./IMG/testimonial/roan-atkinson.jpg')`,
-    profession: 'The fastest driver',
-    opinion: `A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to
-              thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who
-              revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her
-              being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new
-              tomorrow.`,
-  },
 ];
+
 const img = (usersArr[0].image).slice(5,-2);
 $('.opinion').text(usersArr[0].opinion);
 $('.user-name').text(usersArr[0].name);
@@ -116,33 +97,43 @@ $('.big-image').attr('src', img);
 
 
 
-$('.pervious-btn').click(function(){
-
-})
-
-$('.testimotial-list').on('click', '.small-image-wrap', function () {
-
-});
-
 
 $('.users-list').on('click', '.small-image-wrap', function () {
+
   const img = (usersArr[$(this).index()].image).slice(5,-2);
   $('.opinion').text(usersArr[$(this).index()].opinion);
   $('.user-name').text(usersArr[$(this).index()].name);
   $('.profession').text(usersArr[$(this).index()].profession);
   $('.big-image').attr('src', img); 
- 
 
-  if ($(this).hasClass('clicked')) {
-    $(this).animate(
-      { top: $(this).position().top + 10 + 'px' }, "slow");
-    return;
-  }
-  
-  $(this).addClass('clicked');
-  $(this).animate(
-    { top: $(this).position().top - 10 + 'px' }, "slow");
-
-  
+  $(this).addClass('action');
+  $(this).siblings().removeClass('action');
 });
+}); 
+
+$('.testimotial-list').on('click', '.pervious-btn', function(){
+  const actualWrap = $('.action');
+  $(actualWrap).removeClass('action');
+
+  const prevWrap = $(actualWrap).prev('.small-image-wrap');
+  if (prevWrap.length) {
+    $(prevWrap).addClass('action');
+  } else {
+    $('.small-image-wrap').last().addClass('action');
+  }
+
+  $('.small-image-wrap.action').trigger('click');
+});
+
+
+$('.testimotial-list').on('click', '.next-btn', function(){
+  const actualWrap = $('.action');
+  $(actualWrap).removeClass('action');
+  const nextWrap = $(actualWrap).next();
+  if (nextWrap.length > 0) {
+    $(nextWrap).addClass('action'); 
+  } else {
+    $('.small-image-wrap').first().addClass('action');
+  }
+  $('.small-image-wrap.action').trigger('click');
 });

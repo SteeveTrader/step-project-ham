@@ -98,6 +98,12 @@ body {
     border-bottom: 2px solid #18CFAB;;
 }
 
+.search-icon {
+    fill: rgba(255, 255, 255, 0.6);
+}
+.search-icon:hover {
+    fill: #18CFAB;
+}
 .sub-title,
 .title,
 .btn {
@@ -230,7 +236,8 @@ body {
 .our-work-container,
 .news-container,
 .testimonial-wrapper {
-    width: 1160px;     
+    width: 1160px;    
+    margin: 0 auto; 
 }
 
 .services-container,
@@ -442,3 +449,123 @@ body {
     color: #FFFFFF;
 }
 
+.testimonial-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.opinion {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    color: #BBBBBB;
+    text-align: center;
+    margin: 27px 0;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    color: #18CFAB;
+    text-transform: uppercase;
+}
+
+.profession {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    color: #BBBBBB;
+    margin: 8px 0 38px;
+}
+
+.big-image-wrap {
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+    background: rgba(31, 218, 181, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 51px;
+}
+
+.big-image {
+    width: 143px;
+    height: 142px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimotial-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.users-list {
+    position: relative;    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+
+.small-image-wrap {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(31, 218, 181, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.small-image {
+    width: 59px;
+    height: 59px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.next-btn,
+.pervious-btn {
+    border: 1px solid #BBBBBB;
+    background: none;
+    padding: 8px 11px;
+}
+
+.next-btn:hover,
+.pervious-btn:hover {
+    border: 1px solid #18CFAB;
+    background: #18CFAB;
+}
+
+.next-btn path:hover,
+.pervious-btn path:hover {
+    fill: FFFFFF;
+}
+
+/* footer-----------------------*/
+.footer {
+    background-color: #22353F;
+    height: 121px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;
+    color: #AEAEAE;
+}
+
+.copyright span {
+    color: #18CFAB;
+}

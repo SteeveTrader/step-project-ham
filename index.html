@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/jquery.css">
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="stylesheet" href="./CSS/js-styles.css">  
@@ -37,20 +36,19 @@
 
             <nav class="nav-container">
                 <ul class="menu-navbar">
-                    <li><a href="">home</a></li>
-                    <li><a href="">about</a></li>
-                    <li><a href="">blog</a></li>
-                    <li><a href="">skills</a></li>
-                    <li><a href="">service</a></li>
-                    <li><a href="">work</a></li>
-                    <li><a href="">testimonials</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">skills</a></li> <!--доработать плавную аннимацию-->
+                    <li><a href="#">service</a></li>
+                    <li><a href="#">work</a></li>
+                    <li><a href="#">testimonials</a></li>
+                    <li><a href="#">
+                        
+                        <svg  class="search-icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="20px" height="18px"><path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"/></svg>
+                    </a></li>
                 </ul>
 
-                <form class="search-form-container">
-                    <input class="js-search-place" type="text" value="" placeholder="Search" autofocus> 
-                    <input class="js-btn-turn-back" type="button" value=" " title="Отменить поиск">
-                    <input class="js-btn-search"  type="submit" value=" " title="Начать поиск">
-                </form>
             </nav>
 
         </header>
@@ -70,7 +68,7 @@
         </section>
     </section>
 
-    <main class="main-container">
+    <main class="main-container" id="skills">
         <section class="theme-card-wrapper">
             <a href="#" class="card-item dark-item">
                 <svg width="58" height="98" viewBox="0 0 58 98" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +100,7 @@
             </a>
         </section>
 
-        <section class="services-container">
+        <section class="services-container" id="service">
             <h2 class="services-title">Our Services</h2>
 
             <p class="underline"></p>
@@ -344,7 +342,7 @@
                                     </svg>                                
                             </button>
                     <ul class="users-list">
-                        <li class="small-image-wrap" data-name="Jeremy Clarkson"><img class="small-image" src="./IMG/testimonial/JZ.jpg" alt="Jeremy Clarkson"></li>
+                        <li class="small-image-wrap action" data-name="Jeremy Clarkson"><img class="small-image" src="./IMG/testimonial/JZ.jpg" alt="Jeremy Clarkson"></li>
                         <li class="small-image-wrap" data-name="Richard Hammond"><img class="small-image" src="./IMG/testimonial/Hammond.jpg" alt="Richard Hammond"></li>
                         <li class="small-image-wrap" data-name="James May"><img class="small-image" src="./IMG/testimonial/captain-slow.jpg" alt="James May"></li>
                         <li class="small-image-wrap" data-name="The Stig"><img class="small-image" src="./IMG/testimonial/stig.jpg" alt="The Stig"></li>
@@ -362,5 +360,9 @@
 
         </section>
     </main>
+
+    <footer class="footer">
+        <p class="copyright">© Copyright 2015 <span>theHam </span>| All Rights Reserved</p>
+    </footer>
 </body>
 </html>

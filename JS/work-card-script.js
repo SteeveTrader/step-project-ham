@@ -347,7 +347,6 @@ const workCardsArr = [
 
 const card = document.querySelector('.work-cards');
 const cardContainer = document.querySelector('.card-container');
-const allCards = document.querySelector('.js-all');
 
 
 const getRandomCard = (arr, len) => {
@@ -405,30 +404,35 @@ card.addEventListener('click', (event) => {
   if (event.target.dataset.class === 'all') { 
     cardContainer.innerHTML = '';
     cardContainer.insertAdjacentHTML('beforeend', cardListHtml);
+    $('.load-btn').css('display', 'block');
     return;
   }
 
   if (event.target.dataset.class === 'graphic-design') { 
     cardContainer.innerHTML = '';
     cardContainer.insertAdjacentHTML('beforeend', graphicDesignCard);
+    $('.load-btn').css('display', 'block');
     return;
   } 
 
   if (event.target.dataset.class === 'web-design') { 
     cardContainer.innerHTML = '';
     cardContainer.insertAdjacentHTML('beforeend', webDesignCard);
+    $('.load-btn').css('display', 'block');
     return;
   } 
 
   if (event.target.dataset.class === 'landing-pages') { 
     cardContainer.innerHTML = '';
     cardContainer.insertAdjacentHTML('beforeend', landingPageCard);
+    $('.load-btn').css('display', 'block');
     return;
   } 
 
   if (event.target.dataset.class === 'wordpress') { 
     cardContainer.innerHTML = '';
     cardContainer.insertAdjacentHTML('beforeend', wordpressCard);
+    $('.load-btn').css('display', 'block');
     return;
   } 
 
@@ -445,7 +449,7 @@ btn.addEventListener('click', elem => {
     setTimeout(() => {
       load.classList.toggle('active');
       cardContainer.insertAdjacentHTML('beforeend', cardListHtml);
-    }, 3000);
+    }, 2000);
 
     if (!elem.target) {
       load.classList.toggle('active');
