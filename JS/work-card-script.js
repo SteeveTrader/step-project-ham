@@ -397,6 +397,7 @@ const wordpressCard = d.map(getCardHtml).join('');
 cardContainer.insertAdjacentHTML('beforeend', cardListHtml);
 
 card.addEventListener('click', (event) => {
+  
   if (event.target === event.currentTarget) { 
     return;
   }

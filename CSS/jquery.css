@@ -48,6 +48,7 @@
 }
 
 .testimotial-list {
+
     list-style: none;
     display: flex;
     justify-content: center;
@@ -55,7 +56,17 @@
     gap: 30px;
 }
 
+.users-list {
+    position: relative;    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+
 .small-image-wrap {
+    position: relative;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -71,17 +82,24 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.next-btn {
+.next-btn,
+.pervious-btn {
     border: 1px solid #BBBBBB;
     background: none;
     padding: 8px 11px;
 }
 
-.next-btn:hover {
+.next-btn:hover,
+.pervious-btn:hover {
     border: 1px solid #18CFAB;
     background: #18CFAB;
 }
 
-.next-btn path:hover {
+.next-btn path:hover,
+.pervious-btn path:hover {
     fill: FFFFFF;
+}
+
+.small-image-wrap.action {
+    position: relative;
 }

@@ -57,6 +57,7 @@ dateItem.forEach((item) => {
 });
 
 /*testimonial-container --------------------------------------------------*/
+$(document).ready(function () {
 
 const usersArr = [
   {
@@ -65,9 +66,7 @@ const usersArr = [
     profession: 'Mr. farmer',
     opinion: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
               Quam, libero saepe deleniti laudantium architecto sapiente omnis veniam minima,  
-              cupiditate totam esse repellendus laboriosam aspernatur ipsa in ab odio 
-              delectus numquam nobis ex! Maiores reprehenderit officia, tempore exercitationem 
-              et sint perferendis.`,
+              cupiditate totam esse repellendus laboriosam aspernatur ipsa in ab odio `,
   },
 
   {
@@ -92,7 +91,7 @@ const usersArr = [
   {
     name: 'The Stig',
     image: `url('./IMG/testimonial/stig.jpg')`,
-    profession: 'Mr. Noame',
+    profession: 'Mr. Noname',
     opinion: `Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest
               daughter to the legendary General Du Couteau, she made her talents known with swift kills against
               unsuspecting enemies.`,
@@ -109,3 +108,41 @@ const usersArr = [
               tomorrow.`,
   },
 ];
+const img = (usersArr[0].image).slice(5,-2);
+$('.opinion').text(usersArr[0].opinion);
+$('.user-name').text(usersArr[0].name);
+$('.profession').text(usersArr[0].profession);
+$('.big-image').attr('src', img);   
+
+
+
+$('.pervious-btn').click(function(){
+
+})
+
+$('.testimotial-list').on('click', '.small-image-wrap', function () {
+
+});
+
+
+$('.users-list').on('click', '.small-image-wrap', function () {
+  const img = (usersArr[$(this).index()].image).slice(5,-2);
+  $('.opinion').text(usersArr[$(this).index()].opinion);
+  $('.user-name').text(usersArr[$(this).index()].name);
+  $('.profession').text(usersArr[$(this).index()].profession);
+  $('.big-image').attr('src', img); 
+ 
+
+  if ($(this).hasClass('clicked')) {
+    $(this).animate(
+      { top: $(this).position().top + 10 + 'px' }, "slow");
+    return;
+  }
+  
+  $(this).addClass('clicked');
+  $(this).animate(
+    { top: $(this).position().top - 10 + 'px' }, "slow");
+
+  
+});
+});
